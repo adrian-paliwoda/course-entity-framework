@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{B8C10172-2C2E-4944-B041-DA74FA1B5FD7}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>EfCodeFirstHomework</RootNamespace>
+        <AssemblyName>EfCodeFirstHomework</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="DbConfiguration\SqLiteConfiguration.cs" />
+        <Compile Include="DbConfiguration\VidzyContext.cs" />
+        <Compile Include="EntityConfigurations\GenreConfiguration.cs" />
+        <Compile Include="EntityConfigurations\TagConfiguration.cs" />
+        <Compile Include="EntityConfigurations\VideoConfiguration.cs" />
+        <Compile Include="Exercises\ExerciseOne.cs" />
+        <Compile Include="Exercises\LoadingExercise.cs" />
+        <Compile Include="Migrations\202110032236103_InitialModel.cs" />
+        <Compile Include="Migrations\202110032236103_InitialModel.Designer.cs">
+          <DependentUpon>202110032236103_InitialModel.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202110032237340_PopulateGenresTable.cs" />
+        <Compile Include="Migrations\202110032237340_PopulateGenresTable.Designer.cs">
+          <DependentUpon>202110032237340_PopulateGenresTable.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202110032240097_ModifyGenreColumnInVideosTalbe.cs" />
+        <Compile Include="Migrations\202110032240097_ModifyGenreColumnInVideosTalbe.Designer.cs">
+          <DependentUpon>202110032240097_ModifyGenreColumnInVideosTalbe.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202110032302247_AddClassificationColumntToVideosTable.cs" />
+        <Compile Include="Migrations\202110032302247_AddClassificationColumntToVideosTable.Designer.cs">
+          <DependentUpon>202110032302247_AddClassificationColumntToVideosTable.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202110131206270_ChangeModel.cs" />
+        <Compile Include="Migrations\202110131206270_ChangeModel.Designer.cs">
+          <DependentUpon>202110131206270_ChangeModel.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202110140838271_RefactoringFixing.cs" />
+        <Compile Include="Migrations\202110140838271_RefactoringFixing.Designer.cs">
+          <DependentUpon>202110140838271_RefactoringFixing.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\Configuration.cs" />
+        <Compile Include="Model\Classification.cs" />
+        <Compile Include="Model\Genre.cs" />
+        <Compile Include="Model\Tag.cs" />
+        <Compile Include="Model\Video.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="EntityFramework" Version="6.4.4" />
+      <PackageReference Include="System.Data.SQLite" Version="1.0.115" />
+      <PackageReference Include="System.Data.SQLite.EF6" Version="1.0.115" />
+      <PackageReference Include="System.Data.SQLite.EF6.Migrations" Version="1.0.112" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="Migrations\202110032236103_InitialModel.resx">
+        <DependentUpon>202110032236103_InitialModel.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202110032237340_PopulateGenresTable.resx">
+        <DependentUpon>202110032237340_PopulateGenresTable.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202110032240097_ModifyGenreColumnInVideosTalbe.resx">
+        <DependentUpon>202110032240097_ModifyGenreColumnInVideosTalbe.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202110032302247_AddClassificationColumntToVideosTable.resx">
+        <DependentUpon>202110032302247_AddClassificationColumntToVideosTable.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202110131206270_ChangeModel.resx">
+        <DependentUpon>202110131206270_ChangeModel.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Migrations\202110140838271_RefactoringFixing.resx">
+        <DependentUpon>202110140838271_RefactoringFixing.cs</DependentUpon>
+      </EmbeddedResource>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

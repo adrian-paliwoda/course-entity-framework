@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCodeFirstPlutoDataAnnotations", "EfCodeFirstPlutoDataAnnotations\EfCodeFirstPlutoDataAnnotations.csproj", "{BB379C5F-EDEC-4543-89C9-04C565E25B76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB379C5F-EDEC-4543-89C9-04C565E25B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB379C5F-EDEC-4543-89C9-04C565E25B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB379C5F-EDEC-4543-89C9-04C565E25B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB379C5F-EDEC-4543-89C9-04C565E25B76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{38997947-A325-4DE9-924C-AE0F12529FE3}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>EfCodeFirstPluto</RootNamespace>
+        <AssemblyName>EfCodeFirstPluto</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Migrations\202109211658002_FirstTabels.cs" />
+        <Compile Include="Migrations\202109211658002_FirstTabels.Designer.cs">
+            <DependentUpon>202109211658002_FirstTabels.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202109220850202_AddCategoriesTable.cs" />
+        <Compile Include="Migrations\202109220850202_AddCategoriesTable.Designer.cs">
+            <DependentUpon>202109220850202_AddCategoriesTable.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202109220859473_AddCategoryColumnToCourseTable.cs" />
+        <Compile Include="Migrations\202109220859473_AddCategoryColumnToCourseTable.Designer.cs">
+            <DependentUpon>202109220859473_AddCategoryColumnToCourseTable.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202109220906317_AddDatePublishedColumnToCourseTable.cs" />
+        <Compile Include="Migrations\202109220906317_AddDatePublishedColumnToCourseTable.Designer.cs">
+            <DependentUpon>202109220906317_AddDatePublishedColumnToCourseTable.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202109220908145_RenameTitleToNameInCourseTable.cs" />
+        <Compile Include="Migrations\202109220908145_RenameTitleToNameInCourseTable.Designer.cs">
+            <DependentUpon>202109220908145_RenameTitleToNameInCourseTable.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202109220921132_DeleteDatePublishedColumnFromCoursetable.cs" />
+        <Compile Include="Migrations\202109220921132_DeleteDatePublishedColumnFromCoursetable.Designer.cs">
+            <DependentUpon>202109220921132_DeleteDatePublishedColumnFromCoursetable.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202109252036487_DeleteCategoryColumnFromCourseTable.cs" />
+        <Compile Include="Migrations\202109252036487_DeleteCategoryColumnFromCourseTable.Designer.cs">
+            <DependentUpon>202109252036487_DeleteCategoryColumnFromCourseTable.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\202109260658268_RemoveCategoriesTable.cs" />
+        <Compile Include="Migrations\202109260658268_RemoveCategoriesTable.Designer.cs">
+            <DependentUpon>202109260658268_RemoveCategoriesTable.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Migrations\Configuration.cs" />
+        <Compile Include="Model\Author.cs" />
+        <Compile Include="Model\Course.cs" />
+        <Compile Include="Model\CourseLevel.cs" />
+        <Compile Include="Model\Tag.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="SqlConfiguration\PlutoContext.cs" />
+        <Compile Include="SqlConfiguration\SqLiteConfiguration.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="EntityFramework" Version="6.4.4" />
+        <PackageReference Include="System.Data.SQLite" Version="1.0.115" />
+        <PackageReference Include="System.Data.SQLite.EF6.Migrations" Version="1.0.112" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Migrations\202109211658002_FirstTabels.resx">
+            <DependentUpon>202109211658002_FirstTabels.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Migrations\202109220850202_AddCategoriesTable.resx">
+            <DependentUpon>202109220850202_AddCategoriesTable.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Migrations\202109220859473_AddCategoryColumnToCourseTable.resx">
+            <DependentUpon>202109220859473_AddCategoryColumnToCourseTable.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Migrations\202109220906317_AddDatePublishedColumnToCourseTable.resx">
+            <DependentUpon>202109220906317_AddDatePublishedColumnToCourseTable.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Migrations\202109220908145_RenameTitleToNameInCourseTable.resx">
+            <DependentUpon>202109220908145_RenameTitleToNameInCourseTable.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Migrations\202109220921132_DeleteDatePublishedColumnFromCoursetable.resx">
+            <DependentUpon>202109220921132_DeleteDatePublishedColumnFromCoursetable.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Migrations\202109252036487_DeleteCategoryColumnFromCourseTable.resx">
+            <DependentUpon>202109252036487_DeleteCategoryColumnFromCourseTable.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Migrations\202109260658268_RemoveCategoriesTable.resx">
+            <DependentUpon>202109260658268_RemoveCategoriesTable.cs</DependentUpon>
+        </EmbeddedResource>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
